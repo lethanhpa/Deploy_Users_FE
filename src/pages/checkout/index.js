@@ -124,7 +124,6 @@ function Checkout() {
                 <div className={Styles.div_left}>
                     <div className={Styles.content_div_left}>
                         <h4>How would you like to get your order?</h4>
-
                         <div className={Styles.info_div_left}>
                             {customers && (
                                 <div key={customers._id}>
@@ -255,7 +254,7 @@ function Checkout() {
                                 ))
                             )}
                         </div>
-                        <div className={Styles.checkout_right_button}>
+                        <div className={Styles.checkout_button}>
                             <button onClick={handleAddOrder}>Buy Now</button>
                         </div><ToastContainer />
                     </div>

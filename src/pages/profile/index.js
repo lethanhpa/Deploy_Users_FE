@@ -152,13 +152,14 @@ const ProfilePage = () => {
                                         </Form.Item>
 
                                         <Form.Item
+                                            className={Styles.btn}
                                             wrapperCol={{
                                                 offset: 5,
                                             }}
                                         >
                                             <Space>
                                                 <Button
-                                                    className={Styles.btn}
+                                                    className={Styles.btn_edit}
                                                     onClick={() => {
                                                         setOpen(true);
                                                         setUpdateId(customers._id);
@@ -238,16 +239,16 @@ const ProfilePage = () => {
                     <div className={Styles.content_order}>
                         <h1>Your Order</h1>
                         <Table dataSource={dataOrders.results} pagination={false} rowKey="_id">
-                            <Table.Column title="Created Date" dataIndex="createdDate" key="createdDate" render={(text) => {
+                            <Table.Column className={Styles.column_order} title="Created Date" dataIndex="createdDate" key="createdDate" render={(text) => {
                                 return <span>{Moment(text).format("DD/MM/YYYY")}</span>;
                             }} />
-                            <Table.Column title="Shipped Date" dataIndex="shippedDate" key="shippedDate" render={(text) => {
+                            <Table.Column className={Styles.column_order} title="Shipped Date" dataIndex="shippedDate" key="shippedDate" render={(text) => {
                                 return <span>{Moment(text).format("DD/MM/YYYY")}</span>;
                             }} />
-                            <Table.Column title="Payment Type" dataIndex="paymentType" key="paymentType" />
-                            <Table.Column title="Status" dataIndex="status" key="status" />
+                            <Table.Column className={Styles.column_order} title="Payment Type" dataIndex="paymentType" key="paymentType" />
+                            <Table.Column className={Styles.column_order} title="Status" dataIndex="status" key="status" />
                             <Table.Column
-                                title="Action"
+                                className={Styles.column_order} title="Action"
                                 key="action"
                                 render={(record) => (
                                     <Space size="middle">
